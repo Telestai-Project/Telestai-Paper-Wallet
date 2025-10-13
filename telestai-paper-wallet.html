@@ -6618,6 +6618,7 @@ input[type=checkbox] { position: relative; z-index: 20; }
             <div class="culturemenurow">
                 <span><a href="?culture=en" id="cultureen" class="selected" onclick="ninja.translator.translate('en'); return false;">English</a></span> |
                 <span><a href="?culture=es" id="culturees" onclick="ninja.translator.translate('es'); return false;">Español</a></span> |
+				<span><a href="?culture=id-ID" id="cultureid-ID" class="selected" onclick="ninja.translator.translate('id-ID'); return false;">Bahasa Indonesia</a></span> |
                 <span><a href="?culture=fr" id="culturefr" onclick="ninja.translator.translate('fr'); return false;">Français</a></span> |
                 <span><a href="?culture=el" id="cultureel" onclick="ninja.translator.translate('el'); return false;">ελληνικά</a></span> |
                 <span><a href="?culture=it" id="cultureit" onclick="ninja.translator.translate('it'); return false;">italiano</a></span> |
@@ -8428,7 +8429,7 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"footerlabelnowarranty": "Sin garantía.",
 
 		// status html
-		"statuslabelcryptogood": "&#10004; Good!", //TODO: please translate
+		"statuslabelcryptogood": "&#10004; Good!", 
 		"statuslabelcryptogood1": "Your browser can generate cryptographically random keys using window.crypto.getRandomValues", //TODO: please translate
 		"statusokcryptogood": "OK", //TODO: please translate
 		"statuslabelcryptobad": "&times; Oh no!", //TODO: please translate
@@ -8545,6 +8546,183 @@ ninja.foreachSerialized = function (collection, whatToDo, onComplete) {
 		"detailbip38encryptbutton": "Encrypt BIP38", //TODO: please translate
 		"detaillabelq1": "How do I make a wallet using dice? What is B6?", //TODO: please translate
 		"detaila1": "An important part of creating an Telestai wallet is ensuring the random numbers used to create the wallet are truly random. Physical randomness is better than computer generated pseudo-randomness. The easiest way to generate physical randomness is with dice. To create an Telestai private key you only need one six sided die which you roll 99 times. Stopping each time to record the value of the die. When recording the values follow these rules: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. By doing this you are recording the big random number, your private key, in B6 or base 6 format. You can then enter the 99 character base 6 private key into the text field above and click View Details. You will then see the Telestai address associated with your private key. You should also make note of your private key in WIF format since it is more widely used." //TODO: please translate
+	};
+})(ninja.translator);
+﻿(function (translator) {
+	translator.translations["id-ID"] = {
+		// javascript alerts or messages
+        "testneteditionactivated": "Edisi Testnet diaktifkan",
+        "paperlabelbitcoinaddress": "Alamat Telestai:",
+        "paperlabelprivatekey": "Kunci pribadi:",
+        "paperlabelencryptedkey": "Kunci pribadi terenkripsi (kata sandi diperlukan)",
+        "bulkgeneratingaddresses": "Membuat alamat... ",
+        "brainalertpassphrasetooshort": "Frasa sandi yang dimasukkan terlalu pendek.\n\n",
+        "brainalertpassphrasewarning": "Peringatan: Penting untuk memilih frasa sandi yang kuat untuk menghindari serangan brute force yang bertujuan menebaknya dan mencuri Telestai Anda.",
+        "brainalertpassphrasedoesnotmatch": "Frasa sandi tidak cocok.",
+        "detailalertnotvalidprivatekey": "Teks yang Anda masukkan bukan kunci pribadi yang valid",
+        "detailconfirmsha256": "Teks yang Anda masukkan bukan kunci pribadi yang valid\n\nApakah Anda ingin menggunakan teks tersebut sebagai frasa sandi dan menghasilkan kunci pribadi menggunakan hash SHA256 dari frasa sandi tersebut?\n\nPeringatan: Penting untuk memilih frasa sandi yang kuat untuk menghindari serangan brute force yang bertujuan menebaknya dan mencuri Telestai Anda.",
+        "bip38alertincorrectpassphrase": "Frasa sandi salah untuk kunci pribadi terenkripsi ini.", //TODO: please translate
+        "bip38alertpassphraserequired": "Frasa sandi diperlukan untuk kunci BIP38", //TODO: please translate
+        "vanityinvalidinputcouldnotcombinekeys": "Input tidak valid. Kunci tidak dapat digabungkan.",
+        "vanityalertinvalidinputpublickeysmatch": "Input tidak valid. Kunci publik dari kedua input cocok. Anda harus memasukkan dua kunci yang berbeda.",
+        "vanityalertinvalidinputcannotmultiple": "Input tidak valid. Tidak dapat mengalikan dua kunci publik. Pilih 'Tambah' untuk menambahkan dua kunci publik guna mendapatkan alamat Telestai.",
+        "vanityprivatekeyonlyavailable": "Hanya tersedia ketika menggabungkan dua kunci pribadi",
+        "vanityalertinvalidinputprivatekeysmatch": "Input tidak valid. Kunci pribadi dari kedua input cocok. Anda harus memasukkan dua kunci yang berbeda.",
+        
+        // header and menu html
+        "tagline": "Pembuat dompet Telestai sumber terbuka sisi klien dengan Javascript",
+        "generatelabelbitcoinaddress": "Membuat alamat Telestai...",
+        "generatelabelmovemouse": "Gerakkan mouse sebentar untuk menciptakan entropi...",
+        "generatelabelkeypress": "ATAU ketik beberapa karakter acak ke dalam kotak teks ini", //TODO: please translate
+        "singlewallet": "Dompet Tunggal",
+        "paperwallet": "Dompet Kertas",
+        "bulkwallet": "Alamat Massal",
+        "brainwallet": "Dompet Otak",
+        "vanitywallet": "Dompet Kustom",
+        "splitwallet": "Dompet Terpisah", //TODO: please translate
+        "detailwallet": "Detail Dompet",
+        
+        // footer html
+        "footerlabeldonations": "Donasi:",
+        "footerlabeltranslatedby": "Terjemahan: <b>TnJ6T8GooHnAQJ88TopYWbikAnCqnjRMCk</b>",
+        "footerlabelpgp": "PGP",
+        "footerlabelversion": "Riwayat Versi",
+        "footerlabelgithub": "Repositori GitHub",
+        "footerlabelgithubzip": "zip",
+        "footerlabelsig": "sig",
+        "footerlabelcopyright1": "Hak Cipta Telestai (Telestai) - Dompet Kertas.",
+        "footerlabelcopyright2": "Hak Cipta kode JavaScript: di dalam sumber.",
+        "footerlabelnowarranty": "Tanpa jaminan.",
+
+        // status html
+        "statuslabelcryptogood": "&#10004; Bagus!",
+        "statuslabelcryptogood1": "Browser Anda dapat membuat kunci acak secara kriptografis menggunakan window.crypto.getRandomValues", //TODO: please translate
+        "statusokcryptogood": "OK", //TODO: please translate
+        "statuslabelcryptobad": "&times; Oh tidak!", //TODO: please translate
+        "statuslabelcryptobad1": "Browser Anda TIDAK mendukung window.crypto.getRandomValues. Anda harus menggunakan browser yang lebih modern dengan generator ini untuk meningkatkan keamanan kunci yang dihasilkan.",
+        "statusokcryptobad": "OK", //TODO: please translate
+        "statuslabelunittestsgood": "&#10004; Bagus!", //TODO: please translate
+        "statuslabelunittestsgood1": "Semua uji unit sinkron berhasil.", //TODO: please translate
+        "statusokunittestsgood": "OK", //TODO: please translate
+        "statuslabelunittestsbad": "&times; Oh tidak!", //TODO: please translate
+        "statuslabelunittestsbad1": "Beberapa uji unit sinkron TIDAK berhasil. Anda harus mencari browser lain untuk digunakan dengan generator ini.", //TODO: please translate
+        "statusokunittestsbad": "OK", //TODO: please translate
+        "statuslabelprotocolgood": "&#10004; Bagus!", //TODO: please translate
+        "statuslabelprotocolgood1": "Anda menjalankan generator ini dari komputer lokal Anda. <br />Kiat: Periksa kembali Anda *offline* dengan mencoba ", //TODO: please translate
+        "statusokprotocolgood": "OK", //TODO: please translate
+        "statuslabelprotocolbad": "&#9888; Pikirkan dua kali!", //TODO: please translate
+        "statuslabelprotocolbad1": "Anda tampaknya menjalankan generator ini secara *online* dari situs web langsung. Untuk dompet yang berharga, disarankan untuk", //TODO: please translate
+        "statuslabelprotocolbad2": "unduh", //TODO: please translate
+        "statuslabelprotocolbad3": "file zip dari GitHub dan menjalankan generator ini *offline* sebagai file html lokal.", //TODO: please translate
+        "statusokprotocolbad": "OK", //TODO: please translate
+        "statuslabelkeypool1": "Ini adalah log dari semua Alamat Telestai dan Kunci Pribadi yang Anda buat selama sesi Anda saat ini. Memuat ulang halaman akan membuat sesi baru.", //TODO: please translate
+        "statuskeypoolrefresh": "Segarkan", //TODO: please translate
+        "statusokkeypool": "OK", //TODO: please translate
+
+        // single wallet html
+        "newaddress": "Hasilkan Alamat Baru",
+        "singleprint": "Cetak",
+        "singlelabelbitcoinaddress": "Alamat Telestai",
+        "singlelabelprivatekey": "Kunci pribadi (format untuk diimpor):",
+        "singletip1": "<b>Dompet Telestai</b> sesederhana pasangan tunggal antara alamat Telestai dengan kunci pribadi Telestai yang sesuai. Dompet semacam itu telah dibuat untuk Anda di browser web Anda dan ditampilkan di atas.", //TODO: please translate
+        "singletip2": "<b>Untuk menjaga dompet ini</b> Anda harus mencetak atau merekam alamat Telestai dan kunci pribadi. Penting untuk membuat salinan cadangan kunci pribadi dan menyimpannya di lokasi yang aman. Situs ini tidak mengetahui kunci pribadi Anda. Jika Anda akrab dengan PGP, Anda dapat mengunduh halaman HTML *all-in-one* ini dan memeriksa bahwa Anda memiliki versi otentik dari penulis situs ini dengan mencocokkan hash SHA256 dari HTML ini dengan hash SHA256 yang tersedia dalam dokumen riwayat versi yang ditandatangani yang ditautkan di bagian bawah situs ini. Jika Anda meninggalkan/memuat ulang situs atau menekan tombol Hasilkan Alamat Baru, kunci pribadi baru akan dibuat dan kunci pribadi yang sebelumnya ditampilkan tidak akan dapat diambil. Kunci pribadi Telestai Anda harus dijaga kerahasiaannya. Siapa pun yang Anda bagikan kunci pribadinya memiliki akses untuk membelanjakan semua Telestai yang terkait dengan alamat tersebut. Jika Anda mencetak dompet Anda, simpanlah dalam kantong zip lock untuk menjaganya dari air. Perlakukan dompet kertas seperti uang tunai.", //TODO: please translate
+        "singletip3": "<b>Tambahkan dana</b> ke dompet ini dengan menginstruksikan orang lain untuk mengirim Telestai ke alamat Telestai Anda.", //TODO: please translate
+        "singletip4": "<b>Periksa saldo Anda</b> dengan membuka telestai.cryptoscope.io atau blockexplorer.com dan memasukkan alamat Telestai Anda.", //TODO: please translate
+        "singletip5": "<b>Belanjakan Telestai Anda</b> dengan membuka telestai.cryptoscope.io dan 'sapu' saldo penuh kunci pribadi Anda ke akun Anda di situs web mereka. Anda juga dapat membelanjakan dana Anda dengan mengunduh salah satu klien p2p Telestai populer dan mengimpor kunci pribadi Anda ke dompet klien p2p. Ingatlah bahwa ketika Anda mengimpor kunci tunggal Anda ke klien Telestai p2p dan membelanjakan dana, kunci Anda akan digabungkan dengan kunci pribadi lain di dompet klien p2p. Saat Anda melakukan transaksi, kembalian Anda akan dikirim ke alamat Telestai lain di dalam dompet klien p2p. Anda kemudian harus mencadangkan dompet klien p2p dan menjaganya tetap aman karena Telestai Anda yang tersisa akan disimpan di sana. Satoshi menyarankan bahwa seseorang tidak boleh menghapus dompet.", //TODO: please translate
+        "singleshare": "BAGIKAN", //TODO: please translate
+        "singlesecret": "RAHASIA", //TODO: please translate
+
+        // paper wallet html
+        "paperlabelhideart": "Sembunyikan Desain",
+        "paperlabeladdressesperpage": "Alamat per halaman:",
+        "paperlabeladdressestogenerate": "Total alamat:",
+        "papergenerate": "Hasilkan",
+        "paperprint": "Cetak",
+        "paperlabelBIPpassphrase": "Frasa Sandi:", //TODO: please translate
+        "paperlabelencrypt": "Enkripsi BIP38?", //TODO: please translate
+
+        // bulk wallet html
+        "bulklabelstartindex": "Mulai di:",
+        "bulklabelrowstogenerate": "Baris untuk dihasilkan:",
+        "bulklabelcompressed": "Alamat terkompresi?", //TODO: please translate
+        "bulkgenerate": "Hasilkan",
+        "bulkprint": "Cetak",
+		"bulklabelencrypt": "Enkripsi BIP38?",
+		"bulklabelBIPpassphrase":"Frasa sandi:",
+        "bulklabelcsv": "Nilai dipisahkan koma:",
+        "bulklabelformat": "Indeks,Alamat,Kunci pribadi (format untuk diimpor)",
+        "bulklabelq1": "Mengapa saya harus menggunakan \"Alamat Massal\" untuk menerima Telestai di web saya?",
+        "bulka1": "Cara tradisional untuk menerima Telestai di web Anda memerlukan klien Telestai resmi (\"telestaid\") terinstal. Namun banyak layanan hosting tidak mengizinkan instalasi klien tersebut. Selain itu, menjalankan klien di server Anda berarti kunci pribadi juga ada di server dan dapat disusupi jika terjadi intrusi. Dengan menggunakan mekanisme ini, Anda dapat mengunggah hanya alamat Telestai ke server dan bukan kunci pribadi. Dengan cara ini, Anda tidak perlu khawatir seseorang mencuri dompet jika mereka berhasil masuk ke server.",
+        "bulklabelq2": "Bagaimana cara menggunakan \"Alamat Massal\" untuk menerima Telestai di web saya?",
+        "bulklabela2li1": "Gunakan tab \"Alamat Massal\" untuk menghasilkan banyak alamat (lebih dari 10000) terlebih dahulu. Salin dan tempel daftar nilai yang dipisahkan koma (CSV) ke file teks yang aman (terenkripsi) di komputer Anda. Simpan salinan cadangan di tempat yang aman.",
+        "bulklabela2li2": "Impor alamat ke dalam basis data server Anda. Jangan mengunggah dompet atau kunci publik, jika tidak, dompet Anda dapat dicuri. Unggah hanya alamat, karena itu yang akan ditampilkan kepada pelanggan.",
+        "bulklabela2li3": "Tawarkan alternatif di keranjang belanja web Anda agar pelanggan membayar dengan Telestai. Ketika pelanggan memilih untuk membayar dengan Telestai, Anda menampilkan salah satu alamat dari basis data sebagai \"alamat pembayaran\" mereka dan menyimpan ini bersama dengan pesanan.",
+        "bulklabela2li4": "Sekarang Anda perlu menerima pemberitahuan pembayaran. Cari di google \"pemberitahuan pembayaran Telestai\" (atau \"Telestai payment notification\" dalam bahasa Inggris) dan berlangganan salah satu layanan yang muncul. Ada beberapa di antaranya, yang dapat memberi tahu Anda melalui layanan Web, API, SMS, email, dll. Setelah pemberitahuan tiba, yang dapat diotomatisasi, maka Anda dapat memproses pesanan. Untuk memeriksa secara manual apakah Anda telah menerima pembayaran, Anda dapat menggunakan Block Explorer: ganti ALAMAT di bawah ini dengan alamat yang Anda periksa. Transaksi dapat memakan waktu antara 10 menit hingga satu jam untuk dikonfirmasi. <br />http://www.blockexplorer.com/address/ALAMAT<br /><br />Anda dapat melihat transaksi yang belum dikonfirmasi di: http://telestai.cryptoscope.io/ <br />Transaksi yang belum dikonfirmasi biasanya muncul di sana dalam waktu sekitar 30 detik.",
+        "bulklabela2li5": "Telestai yang Anda terima akan disimpan dengan aman di blockchain. Gunakan dompet asli yang Anda buat pada langkah 1 untuk membelanjakannya.",
+
+        // brain wallet html
+        "brainlabelenterpassphrase": "Frasa Sandi:",
+        "brainlabelshow": "Tampilkan",
+        "brainprint": "Cetak",
+        "brainlabelconfirm": "Konfirmasi frasa sandi:",
+        "brainview": "Lihat",
+        "brainalgorithm": "Algoritma: SHA256(frasa sandi)",
+        "brainlabelbitcoinaddress": "Alamat Telestai:",
+        "brainlabelprivatekey": "Kunci pribadi (format untuk diimpor):",
+		"brainlabelcompressed": "Alamat terkompresi?",
+
+        // vanity wallet html
+        "vanitylabelstep1": "Langkah 1 - Hasilkan pasangan kunci Anda",
+        "vanitynewkeypair": "Hasilkan",
+        "vanitylabelstep1publickey": "Kunci publik:",
+        "vanitylabelstep1pubnotes": "Salin dan tempel baris di atas ke bidang \"Your-Part-Public-Key\" di situs web Vanity Pool.",
+        "vanitylabelstep1privatekey": "Kunci pribadi:",
+        "vanitylabelstep1privnotes": "Salin dan tempel kunci pribadi di atas ke dalam file teks. Lebih baik Anda menyimpannya dalam volume terenkripsi. Anda akan membutuhkannya untuk memulihkan kunci pribadi setelah Vanity Pool menemukan awalan Anda.",
+        "vanitylabelstep2calculateyourvanitywallet": "Langkah 2 - Hitung dompet kustom Anda",
+        "vanitylabelenteryourpart": "Masukkan kunci pribadi yang dihasilkan pada langkah 1, dan yang telah Anda simpan:",
+        "vanitylabelenteryourpoolpart": "Masukkan kunci pribadi yang diperoleh dari Vanity Pool:",
+        "vanitylabelnote1": "[CATATAN: kotak input ini dapat menerima kunci publik atau kunci pribadi]",
+        "vanitylabelnote2": "[CATATAN: kotak input ini dapat menerima kunci publik atau kunci pribadi]",
+        "vanitylabelradioadd": "Tambah",
+        "vanitylabelradiomultiply": "Kalikan",
+        "vanitycalc": "Hitung Dompet Kustom",
+        "vanitylabelbitcoinaddress": "Alamat Telestai kustom:",
+        "vanitylabelnotesbitcoinaddress": "Ini adalah alamat baru Anda, yang seharusnya memiliki awalan yang diinginkan.",
+        "vanitylabelpublickeyhex": "Kunci publik kustom (HEX):",
+        "vanitylabelnotespublickeyhex": "Di atas adalah kunci publik dalam format heksadesimal.",
+        "vanitylabelprivatekey": "Kunci pribadi kustom (format untuk diimpor):",
+        "vanitylabelnotesprivatekey": "Ini adalah kunci pribadi untuk dimasukkan ke dalam dompet Anda.",
+		
+		// split wallet html
+		"splitlabelthreshold": "Jumlah minimum share yang diperlukan untuk pemulihan",
+		"splitlabelshares": "Jumlah share",
+		"splitview": "Hasilkan",
+		"combinelabelentershares": "Masukkan share yang ada (dipisahkan dengan Enter, spasi, atau karakter spasi lainnya)",
+		"combineview": "Gabungkan share",
+		"combinelabelprivatekey": "Kunci Pribadi yang Dipulihkan",
+
+        // detail wallet html
+        "detaillabelenterprivatekey": "Masukkan kunci pribadi",
+        "detailkeyformats": "Format Kunci: WIF, WIFC, HEX, B64, B6, MINI, BIP38",
+        "detailview": "Lihat Detail",
+        "detailprint": "Cetak",
+        "detaillabelnote1": "Kunci pribadi Anda adalah nomor rahasia, unik, yang hanya Anda ketahui. Itu dapat diekspresikan dalam berbagai format. Di bawah ini kami menunjukkan alamat dan kunci publik yang sesuai dengan kunci pribadi Anda, serta kunci pribadi dalam format yang paling dikenal (untuk diimpor, hex, base64, dan mini).",
+        "detaillabelnote2": "Telestai menyimpan kunci publik yang dikompresi. Klien juga mendukung impor/ekspor kunci pribadi menggunakan importprivkey/dumpprivkey. Format kunci pribadi yang diekspor bergantung pada apakah alamat dihasilkan di dompet lama atau baru.",
+        "detaillabelbitcoinaddress": "Alamat Telestai:",
+        "detaillabelbitcoinaddresscomp": "Alamat Telestai (terkompresi):",
+        "detaillabelpublickey": "Kunci publik (130 karakter [0-9A-F]):",
+        "detaillabelpublickeycomp": "Kunci publik (terkompresi, 66 karakter [0-9A-F]):",
+        "detaillabelprivwif": "Kunci pribadi untuk diimpor (51 karakter dalam base58, dimulai dengan",
+        "detaillabelprivwifcomp": "Kunci pribadi untuk diimpor (terkompresi, 52 karakter dalam base58, dimulai dengan",
+        "detailcompwifprefix": "'K' atau 'L'",
+        "detaillabelprivhex": "Kunci pribadi dalam format heksadesimal (64 karakter [0-9A-F]):",
+        "detaillabelprivb64": "Kunci pribadi dalam base64 (44 karakter):",
+        "detaillabelprivmini": "Kunci pribadi dalam format mini (22, 26, atau 30 karakter, dimulai dengan 'S'):",
+        "detaillabelpassphrase": "Frasa Sandi BIP38", //TODO: please translate
+        "detailbip38decryptbutton": "Dekripsi BIP38", //TODO: please translate
+        "detailbip38encryptbutton": "Enkripsi BIP38", //TODO: please translate
+        "detaillabelq1": "Bagaimana cara membuat dompet menggunakan dadu? Apa itu B6?", //TODO: please translate
+        "detaila1": "Bagian penting dari pembuatan dompet Telestai adalah memastikan angka acak yang digunakan untuk membuat dompet benar-benar acak. Keacakan fisik lebih baik daripada pseudo-keacakan yang dihasilkan komputer. Cara termudah untuk menghasilkan keacakan fisik adalah dengan dadu. Untuk membuat kunci pribadi Telestai, Anda hanya perlu satu dadu bersisi enam yang Anda lempar 99 kali. Berhenti setiap kali untuk merekam nilai dadu. Saat merekam nilai, ikuti aturan ini: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Dengan melakukan ini, Anda merekam angka acak besar, kunci pribadi Anda, dalam format B6 atau basis 6. Anda kemudian dapat memasukkan kunci pribadi basis 6 sebanyak 99 karakter ke dalam bidang teks di atas dan klik Lihat Detail. Anda kemudian akan melihat alamat Telestai yang terkait dengan kunci pribadi Anda. Anda juga harus mencatat kunci pribadi Anda dalam format WIF karena lebih banyak digunakan." //TODO: please translate
 	};
 })(ninja.translator);
 ﻿(function (translator) {
